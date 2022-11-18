@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Событие onchange</title>
+    <script>
+
+        window.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("input").forEach(e => {
+                e.addEventListener("change", () => {
+                    document.querySelector("output").value = 
+                    `Значение изменилось в ${e.name}`;
+                })
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <form>
+        First <input type="text" name="first" /> <br />
+        Second <input type="text" name="second" /> <br />
+        Third <input type="text" name="third" /> <br />
+    </form>
+    <output></output>
+</body>
+
+</html>

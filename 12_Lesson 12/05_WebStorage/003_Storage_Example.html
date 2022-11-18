@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Использование localStorage</title>
+
+    <script>
+        window.addEventListener("load",  () => {
+
+            if (window.localStorage.pageColor) {
+                document.body.style.backgroundColor = window.localStorage.pageColor;
+            }
+
+            document.getElementById("saveButton").addEventListener("click", () => {
+                const selectedColor = document.querySelector('[type=color]').value
+                window.localStorage.pageColor = selectedColor;
+                document.body.style.backgroundColor = selectedColor;
+            });
+
+         
+        });
+    </script>
+
+</head>
+<body>
+    <form>
+        <input type="color" name="color" /> Orange  
+        <input id="saveButton" type="button" value="Сохранить" />
+    </form>
+</body>
+</html>

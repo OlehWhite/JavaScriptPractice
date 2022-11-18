@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Получение JSON объекта</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script>
+        window.onload = function () {
+            // фунцикя для отображения индикатора загрузки.
+            function show() {
+                document.getElementById("loader").style.display = "block";
+            }
+
+            // фунцикя для удаления индикатора загрузки.
+            function hide() {
+                document.getElementById("loader").style.display = "none";
+            }
+            var xhr = new XMLHttpRequest();
+
+            document.getElementById("buttonGet").onclick = function () {
+
+                xhr.open("GET", "https://swapi.dev/api/people/?page=1");
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        // JSON.parse - преобразование в объект строки полученной с сервера.
+                        var data = JSON.parse(xhr.responseText);
+                        //localStorage.data = JSON.stringify(data);
+                        console.log(data)
+                        hide()
+                    }
+                }
+                xhr.send();
+                show()
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p id="loader" style="display: none;">
+        <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Загрузка...
+        </button>
+    </p>
+    <input id="buttonGet" type="button" value="Get Data" />
+    <p id="output"></p>
+</body>
+
+</html>

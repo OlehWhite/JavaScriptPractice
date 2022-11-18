@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .root {
+            border: 1px solid black;
+        }
+
+        .div {
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root"></div>
+    <script>
+        const c = 10;
+        const count = 100;
+        for (let i = 0; i < count; i++) {
+            const div = document.createElement("div")
+            div.className = "div"
+            div.style.width = c * c + "px"
+            div.style.cssText = `width:${c * c}px; height:${c * c}px`
+            div.innerText = i
+            document.querySelector(".root").append(div)
+            div.onclick = () => {
+                div.remove()
+            }
+        }
+
+    </script>
+</body>
+
+</html>

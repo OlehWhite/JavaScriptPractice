@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Classwork</title>
+    <style>
+        * {
+            font-size: 1.3rem;
+        }
+
+        pre {
+            background: silver;
+
+        }
+
+        .green {
+            color: green;
+        }
+
+        li:nth-child(odd) {
+            background: #e1e6e5;
+            margin: 1rem 0;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", () => {
+            document.getElementsByTagName("ol")[0].addEventListener("dblclick", (e) => {
+                e.target.style.backgroundColor = "green"
+                e.target.style.opacity = ".3"
+                e.target.style.fontSize = ".8rem"
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <ol>
+        <li>
+            Создайте на странице div и дайте ему внешний отступ 150 пикселей. Используя JS выведите в консоль отступ
+        </li>
+        <li>
+            Создайте приложение секундомер.
+            <br>
+            * Секундомер будет иметь 3 кнопки "Старт, Стоп, Сброс"<br>
+            * При нажатии на кнопку стоп фон секундомера должен быть красным, старт - зеленый, сброс - серый
+            * Вывод счётчиков в формате ЧЧ:ММ:СС<br>
+            * Реализуйте Задание используя синтаксис ES6 и стрелочные функции
+        </li>
+        <li>
+
+            Реализуйте программу проверки телефона<br>
+            * Используя JS Создайте поле для ввода телефона и кнопку сохранения<br>
+            * Пользователь должен ввести номер телефона в формате 000-000-00-00 <br>
+
+            * Поле того как пользователь нажимает кнопку сохранить проверте правильность ввода номера, если номер
+            правильный
+            сделайте зеленый фон и используя document.location переведите пользователя на страницу
+            https://risovach.ru/upload/2013/03/mem/toni-stark_13447470_big_.jpeg
+            если будет ошибка отобразите её в диве до input.
+        </li>
+        <li>
+            Слайдер <br>
+            Создайте слайдер который каждые 3 сек будет менять изображения <br>
+            Изображения для отображения<br>
+            https://new-science.ru/wp-content/uploads/2020/03/4848-4.jpg<br>
+            https://universetoday.ru/wp-content/uploads/2018/10/Mercury.jpg<br>
+            https://naukatv.ru/upload/files/shutterstock_418733752.jpg<br>
+            https://cdn.iz.ru/sites/default/files/styles/900x506/public/news-2018-12/20180913_zaa_p138_057.jpg<br>
+            https://nnst1.gismeteo.ru/images/2020/07/shutterstock_1450308851-640x360.jpg
+        </li>
+    </ol>
+
+    <!--stopwatch-->
+
+    <style>
+        .black{
+            background: black;
+        }
+        .silver{
+            background: rgba(88, 88, 88, .5);
+        }
+        .red{
+            background: rgba(231, 40, 40, 0.5);
+        }
+        .green{
+            background: rgba(39, 211, 76, 0.5);
+        }
+        .container-stopwatch{
+
+            width: fit-content;
+            padding: 1rem;
+            text-align: center;
+            border-radius: .5rem;
+            box-shadow: 0 0 10px black;
+        }
+        .stopwatch-display{
+            background: rgba(22, 97, 12, 0.5);
+            padding: 1.5rem;
+            font-weight: bold;
+            box-sizing: border-box;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .stopwatch-display span{
+            font-size: 2rem;
+        }
+        .stopwatch-control button{
+            text-transform: uppercase;
+            color: white;
+            background: rgba(0, 0, 0, 0.829);
+            border: none;
+            cursor:	grab;
+        }
+        .stopwatch-control button:nth-child(2){
+            margin: 0 .5rem;
+        }
+    </style>
+
+    <div class="container-stopwatch black">
+        <div class="stopwatch-display">
+            <span>00</span>:
+            <span>00</span>:
+            <span>00</span>
+        </div>
+        <div class="stopwatch-control">
+            <button class="first">Start</button>
+            <button class="second">Stop</button>
+            <button class="third">Reset</button>
+        </div>
+    </div>
+
+    <script src="FirstTask/src/index.js"></script>
+
+</body>
+
+</html>

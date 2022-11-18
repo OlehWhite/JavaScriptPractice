@@ -1,0 +1,18 @@
+input{
+    display: none;
+}
+input + label::before{
+    width: 10px;
+    height: 10px;
+    border: 1px solid red;
+    display: inline-block;
+    content: "";
+}
+input:checked + label::before{
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border: 1px solid red;
+    display: inline-block;
+    content: "";
+}

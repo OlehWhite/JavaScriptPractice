@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date</title>
+</head>
+<body>
+    <samp></samp>
+    <script>
+        const output = document.querySelector("samp")
+
+        const now = new Date(); //Получение текущей даты и времени
+        output.innerHTML = `Дата и время ${now} <br> <br>` 
+
+        const now1 = new Date(77700000000); // дата с учетом количества милисекунд прошедших с 1 01 1970
+        output.innerHTML += "<b>date1</b> " + now1 + "<br> <br>"
+        
+        const date = new Date("December 25, 1995 21:46:10");
+        output.innerHTML += "<strong>date2 = </strong>" + date + "<br> <br>";
+
+        const date2 = new Date("03/09/2000"); 
+        output.innerHTML +="<strong>date3 = </strong>" + date2 + "<br> <br>";
+
+
+        const date3 = new Date(2000, 4, 9); 
+        output.innerHTML += "<strong>date4 = </strong>" + date3 + "<br> <br>";
+    </script>
+
+</body>
+</html>
