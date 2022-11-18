@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>getElementsByTagName</title>
+    <script type="text/javascript">
+
+        window.onload = () => {
+            // получение всех элементов <p>
+            const [...paragraphs] =  document.getElementsByTagName("p"); 
+
+
+            paragraphs.forEach(element => {
+                element.style.color = "red"
+            });
+
+        }
+    </script>
+</head>
+<body>
+    <p style="color:green">Hello world!!!</p>
+    <p>Hello world!!!</p>
+    <p>Hello world!!!</p>
+    <p>Hello world!!!</p>
+    <p>Hello world!!!</p>
+</body>
+</html>

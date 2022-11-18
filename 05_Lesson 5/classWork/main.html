@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="src/main.js"></script>
+    <script>
+        let string = 'var_text_hello';
+
+        const reg = str => str.split("_").map(item=>item[0].toUpperCase() + item.substr(1));
+
+        console.log(reg(string).join(""))
+    </script>
+</body>
+</html>

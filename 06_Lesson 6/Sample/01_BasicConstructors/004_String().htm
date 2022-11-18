@@ -1,0 +1,43 @@
+﻿<html>
+    <head>
+        <title>Конструктор String()</title>
+
+        <script>
+
+            // переменая со строковым значеним
+            let simpleStr = "My String";
+
+        
+            // объект типа String
+            const objectStr = new String("some String object");
+
+            function newLine(str) {
+                document.write(str + "<br />");
+                document.write("==========================================================<br />");
+                document.write("<br> тип :" + typeof str + "<br><br><br>")
+            }
+/*
+            const name = function () {};
+            const name = function name () {};
+            (function(){}())
+            (function(){})()
+*/
+            newLine(simpleStr);
+
+            newLine(objectStr);
+
+           
+            objectStr.customProperty = 123;
+            document.write(objectStr.customProperty + "<br />");
+
+           
+            simpleStr.customProperty2 = function () {};
+            document.write(simpleStr.customProperty2);
+
+        </script>
+
+    </head>
+    <body>
+    <!--Здесь располагается какая либо разметка-->
+    </body>
+</html>

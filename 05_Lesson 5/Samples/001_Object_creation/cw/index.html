@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Создайте объект криптокошилек. В кошельке должно хранится имя владельца, несколько валют Bitcoin, Ethereum,
+            Stellar и в каждой валюте дополнительно есть имя валюты, логотип, несколько монет и курс на сегодняшний
+            день.
+            Также в объекте кошелек есть метод при вызове которого он принимает имя валюты и выводит на страницу
+            информацию.
+            "Добрый день, ... ! На вашем балансе (Название валюты и логотип) осталось N монет, если вы сегодня продадите
+            их то, получите ...грн.
+        */
+        //Кошилек
+        const obj = {
+            name: "Ivan",
+            BTC: {
+                name: "Bitcoin",
+                rate: 48620.51,
+                logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1.png' alt='Bitcoin' >",
+                coin: 89
+            },
+            ETH: {
+                name: "Ethereum",
+                rate: 1760.98,
+                logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png' alt='Ethereum' >",
+                coin: 5
+            },
+            XLM: {
+                name: "Stellar",
+                rate: 0.4883,
+                logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/512.png' alt='Stellar' >",
+                coin: 15
+            },
+            show: function (nameCoin) {
+                if(nameCoin !== "BTC" && nameCoin !== "ETH" && nameCoin !== "XLM"){
+                    return console.error("Введи правильное название!")
+                }
+                return `Добрый день, ${obj.name} ! На вашем балансе 
+                ${obj[nameCoin].name} ${obj[nameCoin].logo} осталось ${obj[nameCoin].coin} монет, если вы сегодня 
+                продадите их то, получите ${(obj[nameCoin].rate * obj[nameCoin].coin * 28).toFixed(2)} грн.`
+            }
+        }
+
+       document.write(obj.show(prompt("Напиши название монеты :", "BTC,ETH, XLM")))
+
+    </script>
+</body>
+
+</html>

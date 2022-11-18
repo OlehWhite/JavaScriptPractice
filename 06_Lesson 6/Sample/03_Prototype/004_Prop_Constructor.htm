@@ -1,0 +1,75 @@
+﻿<!--
+    constructor - свойство, которое хранит ссылку на функцию-конструктор, 
+    через которую был создан объект.
+-->
+
+<html>
+<head>
+    <title>Свойство constructor</title>
+
+    <script type="text/javascript">
+
+        // Создаем несколько обьектов используя различные конструкторы
+        var MyArray = [];
+        var MyDate = new Date();
+        var MyString = new String("Some string value");
+        var MyObj = new Object();
+        var MyFunc = new Function("x", "y", "return x + y;"); // никогда!!!!!!!!
+
+        var MyCtor = function (x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        /*
+         Name() 
+
+         function Name () {
+
+         }
+
+         const a = function(){
+
+         }
+
+         const a = function a(){
+
+         }
+
+         (function(){}())
+         (function(){})()
+
+
+
+
+          const a =  (x) =>{ return x*x}
+          const b = x => x*x
+
+*/
+
+
+        var MyCtorObject = new MyCtor(12, 3);
+
+        // Создаем функцию для вывода содержимого свойства constructor аргумента
+
+        function showCtor(obj, name) {
+            document.write("Конструктор обьекта " + name + " это " + obj.constructor + "<br />");
+        }
+
+        document.write("===============================================Значения конструкторов====================================<br />");
+        showCtor(MyArray, "MyArray");
+        showCtor(MyDate, "MyDate");
+        showCtor(MyString, "MyString");
+        showCtor(MyObj, "MyObj");
+        showCtor(MyFunc, "MyFunc");
+        showCtor(MyCtorObject, "MyCtorObject");
+        document.write("======================================================================================================<br />");
+
+   
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<script>
+const user = {
+    name: {
+        first : 'Ivan',
+    },
+    userPhone : '0000000',
+    age: 27,
+} 
+// Перебор объекта, возвращает массив с ключои и значением в массиве
+//console.log(Object.entries(user))
+
+const {age, name , ...other} = user ;
+
+
+console.log(other)
+
+const arr = [1, 1, 2, 8, 9, 'la la la']
+
+const [a, b, c, ...others ] = arr
+
+
+
+</script>

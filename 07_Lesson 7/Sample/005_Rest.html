@@ -1,0 +1,25 @@
+
+
+    <script >
+        //Прринимаем все аргументы 
+        function f(...arr) {
+            console.log(arr)
+            console.warn(arguments)
+        }
+
+       // f(1, 2, 3, 4);   
+       // f(1, 2, 3);
+       // f(1, 2)   
+
+        const a = {
+            name1 : "Ivan",
+            show : (...name) => {
+                document.write(`hello! ${a.name1} : ${name[0]}`)
+            }
+        }
+
+        a.show("Ivanov")
+
+    </script>
+
+

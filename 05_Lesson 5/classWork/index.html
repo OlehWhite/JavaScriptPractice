@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classwork</title>
+    <style>
+        * {
+            font-size: 1.3rem;
+        }
+
+        pre {
+            background: silver;
+
+        }
+
+        .green {
+            color: green;
+        }
+
+        li:nth-child(odd) {
+            background: #e1e6e5;
+            margin: 1rem 0;
+        }
+    </style>
+    <link rel="stylesheet" href="./style/style.css">
+    <script>
+        window.addEventListener("load", () => {
+            document.getElementsByTagName("ol")[0].addEventListener("dblclick", (e) => {
+                e.target.style.backgroundColor = "green"
+                e.target.style.opacity = ".3"
+                e.target.style.fontSize = ".8rem"
+            })
+        })
+    </script>
+</head>
+<body>
+    <ol>
+        <li>Используя CallBack function создайте калькулятор который будет от пользователя принимать 2 числа и знак
+            арефметической операции. При вводе не числа или при делении на 0 выводить ошибку.</li>
+        <li>
+            Создайте объект заработных плат obj. Выведите на экран зарплату Пети и Коли.
+            <pre>
+                <code>
+               <span class="green">//Этот объект дан:</span>
+                     var obj = {'Коля':'1000', 'Вася':'500', 'Петя':'200'};
+                </code>
+            </pre>
+        </li>
+        <li>Создайте объект криптокошилек. В кошельке должно хранится имя владельца, несколько валют Bitcoin, Ethereum,
+            Stellar и в каждой валюте дополнительно есть имя валюты, логотип, несколько монет и курс на сегодняшний
+            день.
+            Также в объекте кошелек есть метод при вызове которого он принимает имя валюты и выводит на страницу
+            информацию.
+            "Добрый день, ... ! На вашем балансе (Название валюты и логотип) осталось N монет, если вы сегодня продадите
+            их то, получите ...грн.</li>
+        <li>Дана строка вида 'var_text_hello'. Сделайте из него текст 'VarTextHello'.</li>
+        <li>Если переменная a больше нуля - то в ggg запишем функцию, которая выводит один !, иначе запишем функцию,
+            которая выводит два !</li>
+        <li>Функция ggg принимает 2 параметра: анонимную функцию, которая возвращает 3 и анонимную функцию, которая
+            возвращает 4. Верните результатом функции ggg сумму 3 и 4. </li>
+        <li>Сделайте функцию, которая считает и выводит количество своих вызовов.</li>
+        <li>Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+            </li>
+        <li> Выведите на страницу название валюты цену покупки и цену продажы. https://api.privatbank.ua/p24api/exchange_rates?json&date=11.01.2021</li>
+    </ol>
+</body>
+</html>

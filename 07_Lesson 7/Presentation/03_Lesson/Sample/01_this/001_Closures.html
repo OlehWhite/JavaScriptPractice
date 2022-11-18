@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Замыкание или closures</title>
+</head>
+
+<body>
+    <script>
+        function init() {
+            const str = "Hello World";
+
+            function displayStr() {
+                // вложенная функция имеет доступ к переменной str
+                alert(str);
+            }
+
+            displayStr();
+        }
+
+        init();
+
+        if (a > 0) {
+            ggg(function () { console.log(1); });
+        } else {
+            ggg(function () { console.log(2); })
+        }
+
+        Функция ggg принимает один агрумент, это callback.
+
+        function ggg(callback) {
+            callback - аргумент в который записывается анонимная функция 
+            callback(); - вызов этой функции
+        }
+    </script>
+</body>
+
+</html>

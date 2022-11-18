@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Work: Lesson 1</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+<script>
+    var userName = prompt("Напишіть своє ім'я:");
+    var userSurName = prompt("Напишіть своє прізвище:");
+    var userAge = parseInt(prompt("Вкажіть свій вік:"));
+
+    var randomNumOne = parseInt(prompt("Вкажіть перше число:"));
+    var randomNumTwo = parseInt(prompt("Вкажіть перше число:"));
+    var randomNumThree = parseInt(prompt("Вкажіть перше число:"));
+
+    var resNum = (randomNumOne + randomNumTwo + randomNumThree) / 3;
+
+    document.write('<div class="header">' + '<script>document.write(userName + " " + userSurName + " " + userAge);' + '<\x2fscript>' + '</div>');
+    document.write('<div class="nav"></div>');
+    document.write('<div class="section"></div>');
+    document.write('<div class="footer">' + '<script>document.write(resNum);' + '<\x2fscript>' + '</div>');
+</script>
+</body>
+</html>

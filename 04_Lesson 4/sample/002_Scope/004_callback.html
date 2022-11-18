@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    console.time("one")
+    const myName = (name) => {
+      return "My name is " + name;
+    }
+    myName()
+    console.timeEnd("one")
+
+    console.time("two")
+    function myName1 (name ) {
+      return "My name is " + name;
+    }
+    myName1()
+    console.timeEnd("two")
+
+    */
+
+    /*
+    const a = x => x *x ;
+    const ar = (a,c) => {
+      return a * c
+    }
+    */
+
+    const myName = (name) => {
+      return "My name is "  + name;
+    }
+
+    const age = (age) => {
+      return ` I'm ${age} years old `
+    }
+
+
+    function broadcaster(text, callback) {
+      const a = text === "Hello" ? "Ivan" : "22"
+      document.write(text, callback(a) + "<br>")
+    }
+
+    broadcaster("Hello", myName)
+    broadcaster("I'm from Kiev.", age)
+  </script>
+</body>
+
+</html>

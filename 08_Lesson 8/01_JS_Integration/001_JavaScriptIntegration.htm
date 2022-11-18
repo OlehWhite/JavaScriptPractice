@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS</title>
+    <!--В тэге Script в head страницы-->
+    <script>
+        function f() {
+            document.write("<div>hello world</div>")
+        }
+    </script>
+
+    <!--Из внешнего файла-->
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <p style="background-color: red;">text</p>
+    <!--В качестве обработчика события через html атрибут.-->
+    <input  onclick="f()" />
+
+    <br>
+
+    <!--Как тело URL адреса-->
+    <a href="javascript:alert('Hello')">Ссылка</a>
+
+    <br />
+
+    <!--В тэге Script в body страницы-->
+    <script>
+        // JavaScript код
+    </script>
+
+    <!--Из внешнего файла----------------------------------------------------------->
+ 
+    <div id="element"></div>
+ 
+   <script src="script.js"></script>
+</body>
+
+</html>

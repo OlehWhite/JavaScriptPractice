@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Classwork</title>
+    <style>
+        * {
+            font-size: 1.3rem;
+        }
+
+        pre {
+            background: silver;
+
+        }
+
+        .green {
+            color: green;
+        }
+
+        li:nth-child(odd) {
+            background: #e1e6e5;
+            margin: 1rem 0;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", () => {
+            document.getElementsByTagName("ol")[0].addEventListener("dblclick", (e) => {
+                e.target.style.backgroundColor = "green"
+                e.target.style.opacity = ".3"
+                e.target.style.fontSize = ".8rem"
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <ol>
+        <li>
+            Реализовать функцию для создания объекта "пользователь".
+            Написать функцию createNewUser(), которая будет создавать и возвращать объект newUser. При вызове функция
+            должна спросить у вызывающего имя и фамилию. Используя данные, введенные пользователем, создать объект
+            newUser со свойствами firstName и lastName. Добавить в объект newUser метод getLogin(), который будет
+            возвращать первую букву имени пользователя, соединенную с фамилией пользователя, все в нижнем регистре
+            (например, Ivan Kravchenko → ikravchenko). Создать пользователя с помощью функции createNewUser(). Вызвать у
+            пользователя функцию getLogin(). Вывести в консоль результат выполнения функции.
+
+
+        </li>
+        <li>Создайте 2 инпута и одну кнопку. Сделайте так чтобы инпуты обменивались содержимым.
+
+        </li>
+        <li>
+            Создайте 5 дивов на странице затем используя getElementsByTagName и forEath поменяйте дивам цвет фона.
+        </li>
+        <li>
+            Создайте многострочное поле для ввода текста и кнопку. После нажатия кнопки пользователем приложение должно
+            сгенерировать тег div с текстом который был в многострочном поле. многострочное поле следует очистить после
+            переимещени информации
+
+        </li>
+        <li>
+            Сздайте картинку и кнопку с названием "Изменить картинку"
+            сделайте так чтобы при загрузке страницы была картинка
+            https://itproger.com/img/courses/1476977240.jpg
+            При нажатии на кнопку перый раз картинка заменилась на
+            https://itproger.com/img/courses/1476977488.jpg
+            при втором нажатии чтобы картинка заменилась на
+            https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png
+
+
+        </li>
+        <li>
+            Создает на странице 10 парахрафов и сделайте так чтобы при нажатии на параграф он исчезал
+
+        </li>
+        <li>Создай такю страничку http://old.code.mu/exercises/javascript/dom/osnovy-raboty-s-dom-v-javascript/6/5.html
+        </li>
+
+    </ol>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+div {
+    display: inline-block;
+    font-size: 0;
+}
+button {
+    display: block;
+}

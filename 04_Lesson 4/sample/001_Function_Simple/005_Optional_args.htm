@@ -1,0 +1,36 @@
+﻿<!--
+
+            В языке JavaScript при вызове функции количество параметров 
+            не обязательно должно совпадать с количеством параметров при объявлении. 
+            Параметры, которым при вызове не были переданы значения, будут равны undefined
+
+-->
+
+<html>
+<head>
+    <title>Необязательные аргументы</title>
+
+    <script type="text/javascript">
+
+        function print(msg = "JS", count = 3) { // Необязательный параметр count.
+             
+
+            for (let i = 0; i < count; i++) {
+                document.write("<p>" + msg);
+            }
+
+            document.write("<hr/>");
+        }
+
+
+        // Вызов функций.
+
+        print("hello");
+        print("world", 7);
+        print(null);
+    </script>
+
+</head>
+<body>
+</body>
+</html>
